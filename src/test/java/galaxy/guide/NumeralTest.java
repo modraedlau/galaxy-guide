@@ -31,7 +31,13 @@ public class NumeralTest {
 
     @Test
     public void testGetLetters() {
-        Numeral numeral = new Numeral(2006);
+        Numeral numeral = new Numeral(58);
+        assertEquals("LVIII", numeral.getLetters());
+
+        numeral = new Numeral(60);
+        assertEquals("LX", numeral.getLetters());
+
+        numeral = new Numeral(2006);
         assertEquals("MMVI", numeral.getLetters());
 
         numeral = new Numeral(1944);

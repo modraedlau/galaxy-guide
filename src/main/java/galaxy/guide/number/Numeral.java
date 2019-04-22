@@ -148,6 +148,21 @@ public final class Numeral {
                             stack.push(current);
                             break;
                         }
+                        if (smaller == Symbol.I || smaller == Symbol.X || smaller == Symbol.C || smaller == Symbol.M) {
+                            if (current.getValue() + smaller.getValue() * 2 == digit) {
+                                stack.push(smaller);
+                                stack.push(smaller);
+                                stack.push(current);
+                                break;
+                            }
+                            if (current.getValue() + smaller.getValue() * 3 == digit) {
+                                stack.push(smaller);
+                                stack.push(smaller);
+                                stack.push(smaller);
+                                stack.push(current);
+                                break;
+                            }
+                        }
                     }
                 }
             }
